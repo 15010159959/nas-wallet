@@ -1,0 +1,25 @@
+<script>
+    customElements.define("nas-body", class extends HTMLElement {
+        constructor() {
+            super();
+
+            var shadow = this.attachShadow({ mode: "open" });
+            shadow.innerHTML = `<style>
+::slotted(.abc) {
+    /* .abc { */
+    color: red;
+}
+</style>
+<div>
+    <div>this is body</div>
+    <slot></slot>
+    <slot name=xxx></slot>
+</div>`;
+        }
+
+        connectedCallback() {
+
+            console.log("nas-body connectedCallback");
+        }
+    });
+</script>
