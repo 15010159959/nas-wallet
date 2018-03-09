@@ -5,18 +5,18 @@
 
     .container {
         width: 100%;
-        height: 800px;
+        height: 650px;
         background-color: #fff;
         position: absolute;
     }
 
     .msg {
         width: 24%;
-        height: 750px;
+        height: 620px;
         background-color: #fff;
         position: absolute;
         left: 0%;
-        
+
         overflow: hidden;
     }
 
@@ -31,11 +31,16 @@
 
     .wallet_banner {
         width: 74%;
-        height: 750px;
+        height: 600px;
         background-color: gray;
         position: absolute;
         left: 26%;
         top: 2%;
+    }
+
+    .wallet_banner .tab {
+        height: 40px;
+        border-bottom: 1px solid #fff;
     }
 
     .tab ul li {
@@ -54,8 +59,12 @@
     .wallet_container .daoru {
         width: 30%;
         height: 100px;
-        background-color: #fff;
         margin: 5% 5%;
+    }
+
+    .wallet_container .daoru .img {
+        width: 50%;
+        height: 96%;
     }
 
     .wallet_container .chuangjian {
@@ -68,7 +77,6 @@
 <template>
     <div class="wallet">
         <div class="container">
-            <div class="tab"></div>
             <div class="msg">
                 <div class="msg_1">Information hints
                     <br> (Operational guidelines, and transfer）
@@ -106,7 +114,11 @@
                     </ul>
                 </div>
                 <div class="wallet_container">
-                    <div class="daoru"></div>
+                    <div class="daoru">
+                        <div class="img">
+                            <img src="static/img/add.jpg"width=60>
+                        </div>
+                    </div>
                     <div class="chuangjian"></div>
                 </div>
             </div>
