@@ -15,6 +15,13 @@ create express server at localhost:xxx then visit it
 
 https://electronjs.org/docs/tutorial/application-distribution
 
+https://www.npmjs.com/package/electron-cli
+
+
+
+
+
+
 ethereum wallet block database
 ~/Library/Ethereum/geth/chaindata
 

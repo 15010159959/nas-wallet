@@ -4,11 +4,28 @@ var electron = require("electron"),
     url = require("url"),
     app = electron.app, // Module to control application life.
     BrowserWindow = electron.BrowserWindow, // Module to create native browser window.
-    mainWindow;
+    mainWindow,
+    gBwOpt;
 
-app.on("activate", onActivate);
-app.on("ready", createWindow);
-app.on("window-all-closed", onWindowAllClosed);
+module.exports = function (mode) {
+    gBwOpt = {
+        height: 700,
+        webPreferences: {
+            nodeIntegration: false,
+            preload: path.resolve(__dirname, "../preload.js")
+        },
+        width: 1200
+    };
+
+    if (mode == "dev") {
+    } else {
+
+    }
+
+    app.on("activate", onActivate);
+    app.on("ready", createWindow);
+    app.on("window-all-closed", onWindowAllClosed);
+};
 
 function onActivate() {
     // On OS X it's common to re-create a window in the app when the
@@ -19,11 +36,7 @@ function onActivate() {
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({
-        height: 600,
-        webPreferences: { nodeIntegration: false },
-        width: 800
-    });
+    mainWindow = new BrowserWindow(gBwOpt);
 
     // and load the index.html of the app.
     mainWindow.loadURL("http://localhost:8080");
