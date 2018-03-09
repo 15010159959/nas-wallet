@@ -1,21 +1,14 @@
 
-==================== code path
 ==================== distribute
 ==================== generate
 ========================================
-==================== code path
-
-electron dev:
-visit dev server at localhost:8080
-
-electron prod:
-create express server at localhost:xxx then visit it
-
 ==================== distribute
 
 https://electronjs.org/docs/tutorial/application-distribution
 
-https://www.npmjs.com/package/electron-cli
+electron command line args - call electron without arg, i.e.
+> node_modules/.bin/electron
+
 
 
 
