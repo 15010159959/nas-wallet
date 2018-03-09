@@ -52,7 +52,6 @@
         "node": ">= 6.0.0",
         "npm": ">= 3.0.0"
     },
-    "main": "elk-index.node",
     "name": "nas-wallet",
     "private": true,
     "scripts": {
