@@ -69,15 +69,16 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 });
 
 module.exports = new Promise((resolve, reject) => {
-    portfinder.basePort = process.env.PORT || config.dev.port
+    portfinder.basePort = process.env.PORT || config.dev.port;
+
     portfinder.getPort((err, port) => {
         if (err) {
-            reject(err)
+            reject(err);
         } else {
             // publish the new Port, necessary for e2e tests
-            process.env.PORT = port
+            process.env.PORT = port;
             // add port to devServer config
-            devWebpackConfig.devServer.port = port
+            devWebpackConfig.devServer.port = port;
 
             // Add FriendlyErrorsPlugin
             devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
@@ -87,13 +88,13 @@ module.exports = new Promise((resolve, reject) => {
                 onErrors: config.dev.notifyOnErrors
                     ? utils.createNotifierCallback()
                     : undefined
-            }))
+            }));
 
             devWebpackConfig.devServer.after = function () {
                 require("child_process").exec("electron .");
             };
 
-            resolve(devWebpackConfig)
+            resolve(devWebpackConfig);
         }
-    })
+    });
 });

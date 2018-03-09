@@ -1,12 +1,21 @@
 
+==================== code path
 ==================== distribute
 ==================== generate
 ========================================
+==================== code path
+
+electron dev:
+visit dev server at localhost:8080
+
+electron prod:
+create express server at localhost:xxx then visit it
+
 ==================== distribute
 
 https://electronjs.org/docs/tutorial/application-distribution
 
-Ethereum wallet 区块数据库
+ethereum wallet block database
 ~/Library/Ethereum/geth/chaindata
 
 ==================== generate

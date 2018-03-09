@@ -6,16 +6,9 @@ var electron = require("electron"),
     BrowserWindow = electron.BrowserWindow, // Module to create native browser window.
     mainWindow;
 
+app.on("activate", onActivate);
 app.on("ready", createWindow);
 app.on("window-all-closed", onWindowAllClosed);
-app.on("activate", onActivate);
-
-function onWindowAllClosed() {
-    // On OS X it is common for applications and their menu bar
-    // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== "darwin")
-        app.quit();
-}
 
 function onActivate() {
     // On OS X it's common to re-create a window in the app when the
@@ -51,4 +44,11 @@ function createWindow() {
         // when you should delete the corresponding element.
         mainWindow = null;
     }
+}
+
+function onWindowAllClosed() {
+    // On OS X it is common for applications and their menu bar
+    // to stay active until the user quits explicitly with Cmd + Q
+    if (process.platform !== "darwin")
+        app.quit();
 }
