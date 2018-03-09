@@ -1,78 +1,117 @@
-<style scoped>
-    h1,
-    h2 {
-        font-weight: normal;
+<style>
+    .wallet {
+        position: relative;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
+    .container {
+        width: 100%;
+        height: 800px;
+        background-color: #fff;
+        position: absolute;
     }
 
-    li {
-        display: inline-block;
-        margin: 0 10px;
+    .msg {
+        width: 24%;
+        height: 750px;
+        background-color: #fff;
+        position: absolute;
+        left: 0%;
+        
+        overflow: hidden;
     }
 
-    a {
-        color: #42b983;
+    .msg .msg_1 {
+        width: 100%;
+        height: 140px;
+        background-color: gray;
+        margin: 12px auto;
+        text-align: center;
+        line-height: 45px;
+    }
+
+    .wallet_banner {
+        width: 74%;
+        height: 750px;
+        background-color: gray;
+        position: absolute;
+        left: 26%;
+        top: 2%;
+    }
+
+    .tab ul li {
+        float: left;
+        width: 33%;
+        list-style: none;
+    }
+
+    .wallet_container {
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        top: 10%;
+    }
+
+    .wallet_container .daoru {
+        width: 30%;
+        height: 100px;
+        background-color: #fff;
+        margin: 5% 5%;
+    }
+
+    .wallet_container .chuangjian {
+        width: 30%;
+        height: 100px;
+        background-color: #fff;
+        margin: 5% 5%;
     }
 </style>
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
-        <h2>Essential Links</h2>
-        <ul>
-            <li>
-                <a href="https://vuejs.org" target="_blank">
-                    Core Docs
-                </a>
-            </li>
-            <li>
-                <a href="https://forum.vuejs.org" target="_blank">
-                    Forum
-                </a>
-            </li>
-            <li>
-                <a href="https://chat.vuejs.org" target="_blank">
-                    Community Chat
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/vuejs" target="_blank">
-                    Twitter
-                </a>
-            </li>
-            <br>
-            <li>
-                <a href="http://vuejs-templates.github.io/webpack/" target="_blank">
-                    Docs for This Template
-                </a>
-            </li>
-        </ul>
-        <h2>Ecosystem</h2>
-        <ul>
-            <li>
-                <a href="http://router.vuejs.org/" target="_blank">
-                    vue-router
-                </a>
-            </li>
-            <li>
-                <a href="http://vuex.vuejs.org/" target="_blank">
-                    vuex
-                </a>
-            </li>
-            <li>
-                <a href="http://vue-loader.vuejs.org/" target="_blank">
-                    vue-loader
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/vuejs/awesome-vue" target="_blank">
-                    awesome-vue
-                </a>
-            </li>
-        </ul>
+    <div class="wallet">
+        <div class="container">
+            <div class="tab"></div>
+            <div class="msg">
+                <div class="msg_1">Information hints
+                    <br> (Operational guidelines, and transfer）
+                    <br>
+                </div>
+                <div class="msg_1">Information hints
+                    <br> (Operational guidelines,and transfer）
+                    <br>
+                </div>
+                <div class="msg_1">Information hints
+                    <br> (Operational guidelines,and transfer）
+                    <br>
+                </div>
+                <div class="msg_1">Information hints
+                    <br> (Operational guidelines,and transfer）
+                    <br>
+                </div>
+                <div class="msg_1">Information hints
+                    <br> (Operational guidelines,and transfer）
+                    <br>
+                </div>
+            </div>
+            <div class="wallet_banner">
+                <div class="tab">
+                    <ul>
+                        <li>
+                            <a href="generate.html">wallet</a>
+                        </li>
+                        <li>
+                            <a href="send-traansation.html">transation</a>
+                        </li>
+                        <li>
+                            <a href="">contracts</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wallet_container">
+                    <div class="daoru"></div>
+                    <div class="chuangjian"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 
