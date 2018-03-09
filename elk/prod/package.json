@@ -1,6 +1,0 @@
-{
-  "description": "this file is required by electron, it will use package.json!main as application's entry",
-  "name": "dev",
-  "main": "main.node.js",
-  "version": "1.0.0"
-}

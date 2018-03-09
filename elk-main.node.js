@@ -5,27 +5,23 @@ var electron = require("electron"),
     app = electron.app, // Module to control application life.
     BrowserWindow = electron.BrowserWindow, // Module to create native browser window.
     mainWindow,
-    gBwOpt;
-
-module.exports = function (mode) {
+    gMode = process.argv.indexOf("--dev") == -1 ? "prod" : "dev",
     gBwOpt = {
         height: 700,
         webPreferences: {
             nodeIntegration: false,
-            preload: path.resolve(__dirname, "../preload.js")
+            preload: path.resolve(__dirname, "./elk-preload.js")
         },
         width: 1200
     };
 
-    if (mode == "dev") {
-    } else {
+if (gMode == "dev") {
+} else {
+}
 
-    }
-
-    app.on("activate", onActivate);
-    app.on("ready", createWindow);
-    app.on("window-all-closed", onWindowAllClosed);
-};
+app.on("activate", onActivate);
+app.on("ready", createWindow);
+app.on("window-all-closed", onWindowAllClosed);
 
 function onActivate() {
     // On OS X it's common to re-create a window in the app when the
@@ -41,12 +37,14 @@ function createWindow() {
     // and load the index.html of the app.
     mainWindow.loadURL("http://localhost:8080");
 
-    // https://stackoverflow.com/questions/40763427/electron-does-not-listen-keydown-event
-    const electronLocalshortcut = require("electron-localshortcut");
-    electronLocalshortcut.register(mainWindow, "Ctrl+F12", () => {
-        // Open DevTools
-        mainWindow.webContents.toggleDevTools();
-    });
+    if (gMode == "dev") {
+        // https://stackoverflow.com/questions/40763427/electron-does-not-listen-keydown-event
+        const electronLocalshortcut = require("electron-localshortcut");
+        electronLocalshortcut.register(mainWindow, "Ctrl+F12", () => {
+            // Open DevTools
+            mainWindow.webContents.toggleDevTools();
+        });
+    }
 
     // Emitted when the window is closed.
     mainWindow.on("closed", onClosed);

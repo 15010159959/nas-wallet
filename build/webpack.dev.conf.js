@@ -91,7 +91,7 @@ module.exports = new Promise((resolve, reject) => {
             }));
 
             devWebpackConfig.devServer.after = function () {
-                require("child_process").exec("electron elk/dev");
+                require("child_process").exec("electron elk-main.node --dev");
             };
 
             resolve(devWebpackConfig);
