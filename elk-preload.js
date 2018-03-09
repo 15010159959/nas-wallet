@@ -1,7 +1,5 @@
 
-console.log("in preload.js");
-
-global.nasWallet = {
+window.nasWallet = {
     saveJson() {
         console.log("saveJson");
     }

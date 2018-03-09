@@ -4,7 +4,7 @@ var electron = require("electron"),
     url = require("url"),
     app = electron.app, // Module to control application life.
     BrowserWindow = electron.BrowserWindow, // Module to create native browser window.
-    mainWindow,
+    mainWindow, // global ref to prevent gc
     gMode = process.argv.indexOf("--dev") == -1 ? "prod" : "dev",
     gBwOpt = {
         height: 700,

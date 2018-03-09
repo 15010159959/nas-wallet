@@ -1,5 +1,8 @@
 
 module.exports = [{
-    component: require("@/routes/home").default,
+    component: require("@/routes/vue-wallet").default,
+    path: "/wallet"
+},{
+    redirect: "wallet",
     path: "/"
 }];

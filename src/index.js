@@ -5,6 +5,8 @@ var Vue = require("vue").default,
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
+require("./index.css");
+
 new Vue({
     components: {
         "vue-app": require("@/components/vue-app").default
