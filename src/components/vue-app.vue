@@ -11,6 +11,7 @@
         background-color: grey;
         display: flex;
         line-height: 40px;
+        margin-top: 12px;
     }
 
     .vue-app .right nav a {
