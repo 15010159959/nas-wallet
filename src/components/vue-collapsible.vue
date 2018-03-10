@@ -52,6 +52,7 @@
         <div class=hand-bar v-on:click=onClickHandbar></div>
         <vue-icon-addr v-bind:addr=addr></vue-icon-addr>
         <div class=line2>
+            <canvas class=qrcode></canvas>
             <br> 1
             <br> 2
             <br> 3
@@ -63,6 +64,8 @@
     </div>
 </template>
 <script>
+    var QRCode = require("qrcode");
+
     module.exports = {
         components: {
             "vue-icon-addr": require("@/components/vue-icon-addr").default
@@ -71,6 +74,9 @@
             onClickHandbar() {
                 this.$emit("clickHandbar", this);
             }
+        },
+        mounted() {
+            QRCode.toCanvas(this.$el.querySelector(".qrcode"), this.addr, { margin: 2 });
         },
         props: ["addr", "collapse"]
     };
