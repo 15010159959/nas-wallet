@@ -9,12 +9,12 @@
     }
 
     .vue-icon-addr :last-child {
-        /* width: 350px; */
         margin-right: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 </style>
 <template>
-
     <div class=vue-icon-addr>
         <div class=addr>{{ addr }}</div>
     </div>

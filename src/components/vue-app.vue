@@ -1,20 +1,21 @@
 <style>
-    .vue-app .vue-body {
+    .vue-app .body {
         display: flex;
     }
 
-    .vue-app .right {
+    .vue-app .body>.right {
         flex: 1;
+        min-width: 0;
     }
 
-    .vue-app .right nav {
+    .vue-app .body>.right nav {
         background-color: grey;
         display: flex;
         line-height: 40px;
         margin-top: 12px;
     }
 
-    .vue-app .right nav a {
+    .vue-app .body>.right nav a {
         color: white;
         flex: 1;
         margin: 0 10px;
@@ -24,7 +25,7 @@
 <template>
     <div class=vue-app>
         <vue-header></vue-header>
-        <div class=vue-body>
+        <div class=body>
             <vue-left></vue-left>
             <div class=right>
                 <nav>
@@ -32,7 +33,7 @@
                     <router-link to=transation>transation</router-link>
                     <router-link to=contracts>contracts</router-link>
                 </nav>
-                <router-view></router-view>
+                <router-view class=mt10></router-view>
             </div>
         </div>
         <vue-footer></vue-footer>

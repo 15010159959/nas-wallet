@@ -2,19 +2,16 @@
     .vue-wallet {
         background-color: gray;
         display: flex;
-        height: 600px;
-        margin-top: 8px;
-        overflow: auto;
     }
 
-    .vue-wallet .left {
-        
+    .vue-wallet>.left {
+        min-width: 0;
     }
 </style>
 <template>
     <div class=vue-wallet>
         <div class=left>
-            <vue-collapsible v-for="o in arr" v-bind:addr=o v-bind:key=o></vue-collapsible>
+            <vue-collapsible v-for="o in arr" v-bind:addr=o v-bind:collapse=true v-bind:key=o v-on:clickHandbar=onClickHandbar></vue-collapsible>
             <div class=add>Add Wallet</div>
         </div>
         <div class=right>
@@ -37,8 +34,19 @@
         },
         data() {
             return {
-                arr: [],
-                msg: 'Welcome to Your Vue.js App'
+                arr: []
+            }
+        },
+        methods: {
+            onClickHandbar(vm) {
+                var i, len;
+
+                // 要展开时先收起其他
+                if (vm.collapse) for (i = 0, len = this.$children.length; i < len; ++i)
+                    if ("collapse" in this.$children[i])
+                        this.$children[i].collapse = true;
+
+                vm.collapse = !vm.collapse;
             }
         },
         mounted() {

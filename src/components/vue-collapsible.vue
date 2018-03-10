@@ -1,4 +1,9 @@
 <style>
+    /*
+        <tag v-on:clickHandbar
+        ></tag>
+    */
+
     .vue-collapsible {
         background-color: beige;
         border-radius: 3px;
@@ -44,7 +49,7 @@
 </style>
 <template>
     <div class=vue-collapsible v-bind:class={collapse}>
-        <div class=hand-bar v-on:click="collapse = !collapse"></div>
+        <div class=hand-bar v-on:click=onClickHandbar></div>
         <vue-icon-addr v-bind:addr=addr></vue-icon-addr>
         <div class=line2>
             <br> 1
@@ -62,16 +67,11 @@
         components: {
             "vue-icon-addr": require("@/components/vue-icon-addr").default
         },
-        data() {
-            return {
-                collapse: true
-            };
+        methods: {
+            onClickHandbar() {
+                this.$emit("clickHandbar", this);
+            }
         },
-        mounted() {
-
-
-
-        },
-        props: ["addr"]
+        props: ["addr", "collapse"]
     };
 </script>

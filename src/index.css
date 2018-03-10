@@ -6,3 +6,7 @@ a {
 body {
     margin: 0;
 }
+
+.mt10 {
+    margin-top: 10px;
+}
