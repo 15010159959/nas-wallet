@@ -45,7 +45,7 @@
 <template>
     <div class=vue-collapsible v-bind:class={collapse}>
         <div class=hand-bar v-on:click="collapse = !collapse"></div>
-        <div class=line1>left icon, right address</div>
+        <vue-icon-addr v-bind:addr=addr></vue-icon-addr>
         <div class=line2>
             <br> 1
             <br> 2
@@ -59,11 +59,19 @@
 </template>
 <script>
     module.exports = {
+        components: {
+            "vue-icon-addr": require("@/components/vue-icon-addr").default
+        },
         data() {
             return {
                 collapse: true
-
             };
-        }
+        },
+        mounted() {
+
+
+
+        },
+        props: ["addr"]
     };
 </script>
