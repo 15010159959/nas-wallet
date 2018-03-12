@@ -7,7 +7,7 @@
     .vue-collapsible {
         background-color: beige;
         border-radius: 3px;
-        margin: 12px;
+        margin: 10px;
         overflow: hidden;
     }
 

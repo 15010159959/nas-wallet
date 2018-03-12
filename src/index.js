@@ -1,6 +1,9 @@
 //
 // https://github.com/ethereum/mist
 // https://github.com/ethereum/meteor-dapp-wallet
+//
+// https://electronjs.org/docs/api/menu#render-process
+// https://github.com/sindresorhus/electron-context-menu
 
 var Vue = require("vue").default,
     VueRouter = require("vue-router").default;

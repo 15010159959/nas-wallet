@@ -3,38 +3,23 @@
         display: flex;
     }
 
-    .vue-app .body>.right {
-        flex: 1;
+    .vue-app .vue-body-left {
+        background-color: #fff;
+        flex: 0 1 200px;
         min-width: 0;
     }
 
-    .vue-app .body>.right nav {
-        background-color: grey;
-        display: flex;
-        line-height: 40px;
-        margin-top: 12px;
-    }
-
-    .vue-app .body>.right nav a {
-        color: white;
+    .vue-app .vue-body-right {
         flex: 1;
-        margin: 0 10px;
-        text-align: center;
+        min-width: 0;
     }
 </style>
 <template>
     <div class=vue-app>
         <vue-header></vue-header>
         <div class=body>
-            <vue-left></vue-left>
-            <div class=right>
-                <nav>
-                    <router-link to=wallet>wallet</router-link>
-                    <router-link to=transation>transation</router-link>
-                    <router-link to=contracts>contracts</router-link>
-                </nav>
-                <router-view class=mt10></router-view>
-            </div>
+            <vue-body-left></vue-body-left>
+            <vue-body-right class=mt10></vue-body-right>
         </div>
         <vue-footer></vue-footer>
     </div>
@@ -44,7 +29,8 @@
         components: {
             "vue-footer": require("@/components/vue-footer").default,
             "vue-header": require("@/components/vue-header").default,
-            "vue-left": require("@/components/vue-left").default
+            "vue-body-left": require("@/components/vue-body-left").default,
+            "vue-body-right": require("@/components/vue-body-right").default
         }
     };
 </script>

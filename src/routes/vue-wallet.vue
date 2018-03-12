@@ -4,18 +4,37 @@
         display: flex;
     }
 
-    .vue-wallet>.left {
+    .vue-wallet>.left,
+    .vue-wallet>.right {
         min-width: 0;
+        overflow: hidden;
+    }
+
+    .vue-wallet>.left {
+        flex: 0 1 240px;
+    }
+
+    .vue-wallet>.right {
+        flex: 1 1 240px;
+    }
+
+    .vue-wallet .add-wallet {
+        background-color: rgb(137, 187, 216);
+        color: beige;
+        cursor: pointer;
+        line-height: 32px;
+        margin: 20px 10px;
+        text-align: center;
     }
 </style>
 <template>
     <div class=vue-wallet>
         <div class=left>
             <vue-collapsible v-for="o in arr" v-bind:addr=o v-bind:collapse="expand != o" v-bind:key=o v-on:clickHandbar=onClickHandbar></vue-collapsible>
-            <div class=add>Add Wallet</div>
+            <div class=add-wallet>Add Wallet ➫</div>
         </div>
         <div class=right>
-            <br>right
+            <br>right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right
             <br>right
             <br>right
             <br>right
