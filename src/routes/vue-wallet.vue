@@ -46,6 +46,7 @@
         mounted() {
 
             this.arr = [
+                "0x7D6e767D994AE11C77cbcf9C0B97aCf0843Cc19E",
                 "0xEFc17b279Ec4e72f1B2c497cC0976c6C6ba705a1",
                 "0x281055afc982d96fab65b3a49cac8b878184cb16",
                 "0xab7c74abc0c4d48d1bdad5dcb26153fc8780f83e",

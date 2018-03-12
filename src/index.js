@@ -1,3 +1,6 @@
+//
+// https://github.com/ethereum/mist
+// https://github.com/ethereum/meteor-dapp-wallet
 
 var Vue = require("vue").default,
     VueRouter = require("vue-router").default;

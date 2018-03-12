@@ -25,8 +25,7 @@
     module.exports = {
         mounted() {
             var icon = blockies({
-                seed: this.addr.toLowerCase(),
-                spotcolor: "#000"
+                seed: this.addr.toLowerCase()
             });
 
             this.$el.insertAdjacentElement("afterbegin", icon);
