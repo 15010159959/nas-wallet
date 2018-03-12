@@ -89,7 +89,7 @@
     }
 
     .vue-transation .t-body ul>li input {
-        width: 80px;
+        width: 120px;
         height: 20px;
     }
 
@@ -104,10 +104,12 @@
         height: 100px;
     }
 
-    .vue-transation .t-check .check {
-        height: 100px;
-        width: 200px;
-        background-color: #ccc;
+    .vue-transation .t-check button {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
     }
 </style>
 <template>
@@ -119,21 +121,24 @@
                         <option value="ETH">ETH</option>
                         <option value="NAS">NAS</option>
                     </select>
+                    Currency
                 </li>
                 <li>
-                    <input type="text">ETH/NAS
+                    <input type="text">Quantity
                 </li>
                 <li>
                     <select>
                         <option value="ETH">40Gwei</option>
                         <option value="NAS">20Gwei</option>
                     </select>
+                    Fees
                 </li>
             </ul>
             <div class="swap">
                 swap
             </div>
         </div>
+        
         <div class=t-head>
             <div class=from>
                 <span>FROM</span>
@@ -152,7 +157,7 @@
         </div>
 
         <div class=t-check>
-            <div class="check">确认</div>
+            <button>确认</button>
         </div>
     </div>
 </template>
