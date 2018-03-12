@@ -102,6 +102,16 @@
 </style>
 <template>
     <div class=vue-transation>
+            <div class=t-body>
+                    <ul>
+                        <li>币种</li>
+                        <li>数量</li>
+                        <li>Gas</li>
+                    </ul>
+                    <div class="swap">
+                        swap
+                    </div>
+                </div>
         <div class=t-head>
             <div class=from>
                 <span>FROM</span>
@@ -118,16 +128,7 @@
                 </div>
             </div>
         </div>
-        <div class=t-body>
-            <ul>
-                <li>币种</li>
-                <li>数量</li>
-                <li>Gas</li>
-            </ul>
-            <div class="swap">
-                swap
-            </div>
-        </div>
+       
         <div class=t-check>
             <div class="check">确认</div>
         </div>
