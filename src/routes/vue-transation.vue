@@ -98,6 +98,11 @@
         width: 400px;
         background-color: #fff;
         margin: auto;
+        text-align: center;
+    }
+
+    .vue-transation .t-body .swap input {
+        width: 50px;
     }
 
     .vue-transation .t-check {
@@ -135,10 +140,24 @@
                 </li>
             </ul>
             <div class="swap">
-                swap
+                <h3> I want to swap my</h3>
+                <input type=text value=Amount>
+                <select>
+                    <option value=ETH>ETH</option>
+                    <option value=NAS>NAS</option>
+                </select>
+                for
+                <input type=text value=0>
+                <select>
+                    <option value=NAS>NAS</option>
+                    <option value=ETH>ETH</option>
+                </select>
+                <br>
+                <br>
+                <button>Let's do this</button>
             </div>
         </div>
-        
+
         <div class=t-head>
             <div class=from>
                 <span>FROM</span>
