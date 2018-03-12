@@ -1,9 +1,9 @@
 
-var electron = require("electron"),
-    path = require("path"),
+var path = require("path"),
     url = require("url"),
+    electron = require("electron"),
+    electronLocalshortcut = require("electron-localshortcut"),
     app = electron.app, // Module to control application life.
-    BrowserWindow = electron.BrowserWindow, // Module to create native browser window.
     mainWindow, // global ref to prevent gc
     gMode = process.argv.indexOf("--dev") == -1 ? "prod" : "dev",
     gBwOpt = {
@@ -32,14 +32,15 @@ function onActivate() {
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow(gBwOpt);
+    mainWindow = new electron.BrowserWindow(gBwOpt);
 
     // and load the index.html of the app.
     mainWindow.loadURL("http://localhost:8080");
 
     if (gMode == "dev") {
         // https://stackoverflow.com/questions/40763427/electron-does-not-listen-keydown-event
-        const electronLocalshortcut = require("electron-localshortcut");
+        mainWindow.webContents.openDevTools();
+
         electronLocalshortcut.register(mainWindow, "Ctrl+F12", () => {
             // Open DevTools
             mainWindow.webContents.toggleDevTools();
