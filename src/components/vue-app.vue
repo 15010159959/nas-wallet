@@ -3,15 +3,18 @@
         display: flex;
     }
 
-    .vue-app .vue-body-left {
-        background-color: #fff;
-        flex: 0 1 200px;
+    .vue-app .vue-body-left,
+    .vue-app .vue-body-right {
         min-width: 0;
     }
 
-    .vue-app .vue-body-right {
+    .vue-app .vue-body-left {
         flex: 1;
-        min-width: 0;
+        max-width: 200px;
+    }
+
+    .vue-app .vue-body-right {
+        flex: 1 1 240px;
     }
 </style>
 <template>

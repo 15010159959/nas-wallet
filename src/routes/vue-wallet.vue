@@ -15,7 +15,7 @@
     }
 
     .vue-wallet>.right {
-        flex: 1 1 240px;
+        flex: 1;
     }
 
     .vue-wallet .add-wallet {

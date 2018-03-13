@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>new wallet</title>
+    <style>
+        .container {
+            width: 100%;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .container .one {
+            width: 90%;
+            height: 400px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+
+        .container .one input {
+            width: 50%;
+            height: 38px;
+            font-size: 40px;
+            margin-top: 20px;
+
+        }
+
+        .container .one .set {
+            font-size: 30px;
+            border: 1px solid black;
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+        }
+
+        .container .one .word {
+            font-size: 20px;
+        }
+
+        .container .two {
+            width: 90%;
+            height: 400px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+
+        .container .two .download {
+            font-size: 23px;
+            border: 1px solid black;
+            display: block;
+            width: 350px;
+            margin: 20px auto;
+        }
+
+        .container .two .continue {
+            font-size: 23px;
+            border: 1px solid black;
+            display: block;
+            width: 260px;
+            margin: 20px auto;
+        }
+
+        .container .three {
+            width: 90%;
+            height: 400px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+
+        .container .three .set {
+            font-size: 30px;
+            border: 1px solid black;
+            display: block;
+            width: 248px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <h1>new wallet</h1>
+            <h3>Enter a stronger password (at least 9 bits)</h3>
+            <input type="password">
+            <br>
+            <span class="set">generate</span>
+            <span class="word">This password encrypts your private key. This does not act as a seed to generate your keys. You will need this password + your private key to unlock your wallet.</span>
+            <br>
+            <br>
+            <a href="#">How to Create a Wallet · Getting Started</a>
+        </div>
+
+        <div class="img">
+            <img src="img/jiantou.png" alt="">
+        </div>
+
+        <div class="two">
+            <h1>Save your Keystore or private key. Don't forget your password.</h1>
+            <span class="download"> download Keystore File (UTC / JSON)</span>
+            <div>
+                    **Do not lose it!** It cannot be recovered if you lose it.
+                <br>
+                    **Do not share it!** Your funds will be stolen if you use this file on a malicious/phishing site.
+                <br>
+                    **Make a backup!** Secure it like the millions of dollars it may one day be worth.
+            </div>
+            <span class="continue">I understand. Continue.</span>
+        </div>
+
+        <div class="img">
+                <img src="img/jiantou.png" alt="">
+            </div>
+
+        <div class="three">
+            <h1>Save Your Private Key.</h1>
+            <textarea name="key" id="" cols="100" rows="5">95f746c4ff4b171fa34ea95c868ece4032776bfce1746d30a55a548cea61040f</textarea>
+            <span class="set">Print paper Purse</span>
+            <div>
+                    **Do not lose it!** It cannot be recovered if you lose it.
+                <br>
+                    **Do not share it!** Your funds will be stolen if you use this file on a malicious/phishing site.
+                <br>
+                    **Make a backup!** Secure it like the millions of dollars it may one day be worth.
+            </div>
+            <span class="set">Save your address--> </span>
+        </div>
+    </div>
+
+</body>
+</html>
