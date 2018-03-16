@@ -15,7 +15,7 @@ require("./index.css");
 
 new Vue({
     components: {
-        "vue-app": require("@/components/vue-app").default
+        "vue-app": require("@/components/app").default
     },
     el: "div",
     router: new VueRouter({ routes: require("@/assets/routes") }),
