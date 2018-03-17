@@ -56,6 +56,18 @@
 
                 if (this.password.length) {
 
+                    // https://www.npmjs.com/package/safe-buffer
+                    // https://www.npmjs.com/package/jssha
+                    // https://www.npmjs.com/package/keccak
+                    // https://www.npmjs.com/package/secp256k1
+                    // https://github.com/indutny/elliptic
+                    // nasWallet - index.html
+                    //  line 135 - address = account.getAddressString();
+                    // nasWallet - wallet.js
+                    //  line  17 - return new Account(cryptoUtils.crypto.randomBytes(32));
+                    //  line  82 - var pubKey = this.getPublicKey();
+                    //  line 974 - privateToPublic
+
                     // new Account(t)
                     // - this.privKey = cryptoUtils.crypto.randomBytes(32) // generate once
                     // - this.pubKey = secp256k1.publicKeyCreate(privateKey, false).slice(1)
