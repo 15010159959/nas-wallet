@@ -68,6 +68,7 @@
 
     .vue-transation .t-body {
         height: 250px;
+        text-align: center;
     }
 
 
