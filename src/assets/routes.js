@@ -3,12 +3,12 @@ module.exports = [{
     redirect: "wallet",
     path: "/"
 }, {
-    component: require("@/routes/vue-contracts").default,
+    component: require("@/routes/contracts").default,
     path: "/contracts"
 }, {
-    component: require("@/routes/vue-transation").default,
+    component: require("@/routes/transation").default,
     path: "/transation"
 }, {
-    component: require("@/routes/vue-wallet").default,
+    component: require("@/routes/wallet").default,
     path: "/wallet"
 }];

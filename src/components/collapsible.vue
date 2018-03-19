@@ -26,6 +26,7 @@
     .vue-collapsible .hand-bar::before {
         content: "⇧";
         display: inline-block;
+        transform: rotate(90deg);
         transition: transform .3s ease;
     }
 
@@ -68,7 +69,7 @@
 
     module.exports = {
         components: {
-            "vue-icon-addr": require("@/components/vue-icon-addr").default
+            "vue-icon-addr": require("@/components/icon-addr").default
         },
         methods: {
             onClickHandbar() {

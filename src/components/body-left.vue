@@ -1,4 +1,12 @@
 <style>
+    .vue-body-left {
+        /* display: flex; */
+        /* flex-direction: column; */
+
+        height: 100%;
+        overflow-y: auto;
+    }
+
     .vue-body-left .msg {
         background-color: gray;
         height: 140px;

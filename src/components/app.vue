@@ -1,6 +1,7 @@
 <style>
     .vue-app .body {
         display: flex;
+        height: 100vh;
     }
 
     .vue-app .vue-body-left,
@@ -22,7 +23,7 @@
         <vue-header></vue-header>
         <div class=body>
             <vue-body-left></vue-body-left>
-            <vue-body-right class=mt10></vue-body-right>
+            <vue-body-right></vue-body-right>
         </div>
         <vue-footer></vue-footer>
     </div>
@@ -30,10 +31,10 @@
 <script>
     module.exports = {
         components: {
-            "vue-footer": require("@/components/vue-footer").default,
-            "vue-header": require("@/components/vue-header").default,
-            "vue-body-left": require("@/components/vue-body-left").default,
-            "vue-body-right": require("@/components/vue-body-right").default
+            "vue-footer": require("@/components/footer").default,
+            "vue-header": require("@/components/header").default,
+            "vue-body-left": require("@/components/body-left").default,
+            "vue-body-right": require("@/components/body-right").default
         }
     };
 </script>
